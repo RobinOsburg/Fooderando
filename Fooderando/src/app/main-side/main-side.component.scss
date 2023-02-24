@@ -3,3 +3,56 @@
     height: 40vh;
     object-fit: cover;
 }
+
+.first_row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.second_row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.Menu_selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.circle {
+    width: 20%;
+    border-radius: 10px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.menuname_plus_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    h2 {
+        width: 180px;
+    }
+}
+
+.plus_sign {
+    margin-left: 130px;
+}
