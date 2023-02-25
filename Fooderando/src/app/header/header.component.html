@@ -1,1 +1,28 @@
-<p>header works!</p>
+<nav class="mobile">
+
+    <div (click)="toggleScrollLock()" class="navbar">
+
+        <div class="container nav-container">
+
+            <div class="header_line">
+                <img src="" alt="logo">
+                <h2>Speisekarte</h2>
+            </div>
+
+            <input class="checkbox" type="checkbox" [(ngModel)]="checkboxValue">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+
+
+
+            <div class="menu-items ">
+                <li><a (click)="uncheckCheckbox()" href="#skills">Impressum</a></li>
+                <li><a (click)="uncheckCheckbox()" href="#portfolio">Data protection</a></li>
+                <li><a (click)="uncheckCheckbox()" href="#aboutMe">Location</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
