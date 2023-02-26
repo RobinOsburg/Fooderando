@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BasketComponent } from '../basket/basket.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(public dialog: MatDialog) { }
 
   checkboxValue = false;
 
@@ -20,5 +24,7 @@ export class HeaderComponent {
   uncheckCheckbox() {
     this.checkboxValue = false;
   }
+
+  
 
 }

@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { BasketComponent } from './basket/basket.component';
 import { FormsModule } from '@angular/forms';
 import { ReviewComponent } from './review/review.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ReviewComponent } from './review/review.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

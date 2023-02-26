@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-basket',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class BasketComponent {
 
+  constructor(private dialogRef: MatDialogRef<BasketComponent>){ }
+
+  closeDialog(){
+    this.dialogRef.close();
+  }
 }
