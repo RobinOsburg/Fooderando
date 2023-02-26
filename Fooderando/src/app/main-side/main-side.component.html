@@ -46,48 +46,21 @@
         </span>
     </div>
 
-    <div class="Menu">
+
+    <div *ngFor="let salads of salads" class="Menu">
         <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
+            <h2>{{ salads.menuName }}</h2>
             <img src="../../assets/images/info.ico" alt="info">
             <div class="plus_sign">
                 <img (click)="openBasket()" src="../../assets/images/plus.ico" alt="plus">
             </div>
         </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
+        <span>{{ salads.description }}
         </span>
-        <span>15.50€</span>
+        <span>{{ salads.price }}</span>
     </div>
 
 
-    <div class="Menu">
-        <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
-            <img src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
-        </span>
-        <span>15.50€</span>
-    </div>
-
-    <div class="Menu">
-        <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
-            <img src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
-        </span>
-        <span>15.50€</span>
-    </div>
 
     <div id="bowls" class="Selection_section">
         <img src="" alt="selection_img">
@@ -98,47 +71,20 @@
         </span>
     </div>
 
-    <div class="Menu">
+    <!-- <div *ngFor="let menu of menu" class="Menu">
         <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
+            <h2>{{ menu.menuName }}</h2>
             <img src="../../assets/images/info.ico" alt="info">
             <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
+                <img (click)="openBasket()" src="../../assets/images/plus.ico" alt="plus">
             </div>
         </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
+        <span>{{ menu.description }}
         </span>
-        <span>15.50€</span>
+        <span>{{ menu.price }}</span>
     </div>
 
-    <div class="Menu">
-        <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
-            <img src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
-        </span>
-        <span>15.50€</span>
-    </div>
-
-    <div class="Menu">
-        <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
-            <img src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
-        </span>
-        <span>15.50€</span>
-    </div>
+ -->
 
     <div id="drinks" class="Selection_section">
         <img src="" alt="selection_img">
@@ -149,47 +95,19 @@
         </span>
     </div>
 
-    <div class="Menu">
+    <!-- <div *ngFor="let menu of menu" class="Menu">
         <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
+            <h2>{{ menu.menuName }}</h2>
             <img src="../../assets/images/info.ico" alt="info">
             <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
+                <img (click)="openBasket()" src="../../assets/images/plus.ico" alt="plus">
             </div>
         </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
+        <span>{{ menu.description }}
         </span>
-        <span>15.50€</span>
-    </div>
+        <span>{{ menu.price }}</span>
+    </div> -->
 
-    <div class="Menu">
-        <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
-            <img src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
-        </span>
-        <span>15.50€</span>
-    </div>
-
-    <div class="Menu">
-        <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
-            <img src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
-        </span>
-        <span>15.50€</span>
-    </div>
 
     <div id="desserts" class="Selection_section">
         <img src="" alt="selection_img">
@@ -200,17 +118,16 @@
         </span>
     </div>
 
-    <div class="Menu">
+    <!-- <div *ngFor="let menu of menu" class="Menu">
         <div class="menuname_plus_info">
-            <h2>Menu Name</h2>
+            <h2>{{ menu.menuName }}</h2>
             <img src="../../assets/images/info.ico" alt="info">
             <div class="plus_sign">
-                <img src="../../assets/images/plus.ico" alt="plus">
+                <img (click)="openBasket()" src="../../assets/images/plus.ico" alt="plus">
             </div>
         </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione,
-             error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.
+        <span>{{ menu.description }}
         </span>
-        <span>15.50€</span>
-    </div>
+        <span>{{ menu.price }}</span>
+    </div> -->
 </div>

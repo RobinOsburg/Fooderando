@@ -1,0 +1,4 @@
+[{ "menuName": "Cesars Salad", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione, error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.", "price": "15.50€" },
+    { "menuName": "Margherita Pizza", "description": "A classic pizza made with tomato sauce, mozzarella cheese, and fresh basil.", "price": "12.00€" },
+    { "menuName": "Chicken Alfredo", "description": "A creamy pasta dish with chicken, parmesan cheese, and a rich Alfredo sauce.", "price": "18.00€" }
+]
