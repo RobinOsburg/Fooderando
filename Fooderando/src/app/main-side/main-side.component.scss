@@ -1,7 +1,12 @@
 .image {
     width: 100vw;
-    height: 40vh;
+    height: 30vh;
     object-fit: cover;
+}
+
+.star_ico {
+    width: 15px;
+    margin-right: 5px;
 }
 
 .first_row {
@@ -9,6 +14,10 @@
     justify-content: center;
     flex-direction: column;
     margin-left: 15px;
+    margin-bottom: 10px;
+    span {
+        text-decoration: underline;
+    }
 }
 
 .second_row {
@@ -29,7 +38,7 @@
 .circle {
     width: 20%;
     border-radius: 10px;
-    background-color: gray;
+    background-color: rgb(197, 192, 192);
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -49,9 +58,7 @@
 
 .menuname_plus_info {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 5px;
     h2 {
         width: 180px;
     }
@@ -59,6 +66,13 @@
 
 .plus_sign {
     margin-left: 130px;
+    margin-right: 15px;
+    background-color: rgb(228, 219, 219);
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    padding: 8px;
 }
 
 .Selection_section {

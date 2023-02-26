@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BasketComponent } from './basket/basket.component';
 import { FormsModule } from '@angular/forms';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     MainSideComponent,
     HeaderComponent,
     FooterComponent,
-    BasketComponent
+    BasketComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
