@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class MainSideComponent implements OnInit {
 
   salads: any;
+  basketItems: any[] = [];
 
   constructor(public dialog: MatDialog,private http: HttpClient) { }
 
@@ -19,6 +20,22 @@ export class MainSideComponent implements OnInit {
       this.salads = data;
     });
   }
+
+  addToBasket(salads: any) {
+    const item = {
+      name: salads.menuName,
+      price: salads.price
+    };
+
+    this.basketItems.push(item);
+
+    this.dialog.open(BasketComponent, {
+      data: {
+        items: this.basketItems
+      }
+    });
+  }
+
 
   openBasket(){
     this.dialog.open(BasketComponent) 
