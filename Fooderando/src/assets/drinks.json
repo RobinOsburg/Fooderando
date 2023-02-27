@@ -1,0 +1,17 @@
+[
+    {
+        "menuName": "Soft Drinks",
+        "description": "Cola , Fanta, Sprite.",
+        "price": "15.50€"
+    },
+    {
+        "menuName": "Iced Teas",
+        "description": "Lemon, Peach, Homemade Teas.",
+        "price": "12.00€"
+    },
+    {
+        "menuName": "Hot Drinks",
+        "description": "Cofe, Tea, Hot Chocalate.",
+        "price": "18.00€"
+    }
+]

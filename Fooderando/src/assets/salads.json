@@ -1,4 +1,17 @@
-[{ "menuName": "Cesars Salad", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi nulla illum aliquid sed ratione, error qui esse obcaecati quod dolor est sunt quos fuga atque quisquam rem harum eligendi.", "price": "15.50€" },
-    { "menuName": "Margherita Pizza", "description": "A classic pizza made with tomato sauce, mozzarella cheese, and fresh basil.", "price": "12.00€" },
-    { "menuName": "Chicken Alfredo", "description": "A creamy pasta dish with chicken, parmesan cheese, and a rich Alfredo sauce.", "price": "18.00€" }
+[
+    {
+        "menuName": "Cesars Salad",
+        "description": " A classic salad made with romaine lettuce, Parmesan cheese, croutons, and a dressing made with garlic, anchovies, lemon juice, and olive oil. Perfect as a side or as a main course when topped with grilled chicken or shrimp.",
+        "price": "15.50€"
+    },
+    {
+        "menuName": "Greek Salad",
+        "description": "A Mediterranean-style salad made with crisp lettuce, tomatoes, cucumbers, red onions, feta cheese, and Kalamata olives. Served with a tangy vinaigrette dressing, this salad is a refreshing and healthy choice.",
+        "price": "12.00€"
+    },
+    {
+        "menuName": "Caprese Salad",
+        "description": "An Italian salad made with ripe tomatoes, fresh mozzarella cheese, and basil leaves. Drizzled with olive oil and balsamic glaze, this salad is a simple and delicious appetizer or side dish.",
+        "price": "18.00€"
+    }
 ]

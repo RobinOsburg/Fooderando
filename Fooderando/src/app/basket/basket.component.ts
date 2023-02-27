@@ -1,7 +1,6 @@
-import { Component,Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-
 
 @Component({
   selector: 'app-basket',
@@ -10,24 +9,37 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class BasketComponent {
 
-
   items: any[];
 
-  constructor(private dialogRef: MatDialogRef<BasketComponent>,@Inject(MAT_DIALOG_DATA) public data: any){
+  constructor(private dialogRef: MatDialogRef<BasketComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
     this.items = data.items;
-   }
+  }
 
-   getTotal() {
+  getTotal() {
     let total = 0;
 
     for (let item of this.items) {
-      total += parseFloat(item.price);
+      total += parseFloat(item.price) * item.quantity;
     }
 
     return total.toFixed(2);
   }
 
-  closeDialog(){
+  increaseQuantity(item: any) {
+    item.quantity++;
+  }
+
+  decreaseQuantity(item: any) {
+    const index = this.items.indexOf(item);
+    if (item.quantity > 0) {
+      item.quantity--;
+    }
+    if(item.quantity <= 0){
+      this.items.splice(index, 1);
+    }
+  }
+
+  closeDialog() {
     this.dialogRef.close();
   }
 }

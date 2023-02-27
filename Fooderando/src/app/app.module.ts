@@ -12,6 +12,7 @@ import { ReviewComponent } from './review/review.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

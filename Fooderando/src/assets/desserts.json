@@ -1,0 +1,17 @@
+[
+    {
+        "menuName": "Tiramisu",
+        "description": " An Italian dessert made of layers of espresso-dipped ladyfingers and creamy mascarpone cheese. Topped with cocoa powder for a rich, indulgent flavor.",
+        "price": "15.50€"
+    },
+    {
+        "menuName": "Crème Brûlée",
+        "description": "A classic French dessert consisting of a creamy vanilla custard topped with a layer of caramelized sugar. The contrast between the crunchy sugar topping and the smooth custard is heavenly.",
+        "price": "12.00€"
+    },
+    {
+        "menuName": "Cheesecake",
+        "description": "A creamy and decadent dessert made with a graham cracker crust and a filling of cream cheese, sugar, and eggs. Can be served plain or topped with fruit, chocolate, or caramel for added flavor.",
+        "price": "18.00€"
+    }
+]

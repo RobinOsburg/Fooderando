@@ -1,0 +1,17 @@
+[
+    {
+        "menuName": "Buddha Bowl",
+        "description": "A colorful and nutritious meal with a mix of cooked and raw veggies, a protein source such as tofu or chickpeas, and a whole grain such as quinoa or brown rice. Topped with a flavorful sauce or dressing for a satisfying and healthy meal..",
+        "price": "15.50€"
+    },
+    {
+        "menuName": "Hawaiin Bowl",
+        "description": "Hawaiian Bowl: Rice, veggies, and your choice of raw or marinated fish. Delicious, healthy, and customizable..",
+        "price": "12.00€"
+    },
+    {
+        "menuName": "Indian Bowl",
+        "description": "Indian Bowl: A savory dish with a base of rice or grains, topped with spiced vegetables, legumes, and your choice of meat or tofu. Bursting with flavor and customizable to your taste..",
+        "price": "18.00€"
+    }
+]
