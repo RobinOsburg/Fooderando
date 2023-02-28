@@ -11,19 +11,21 @@ export class HeaderComponent {
 
   constructor(public dialog: MatDialog) { }
 
-  checkboxValue = false;
+ 
 
-  toggleScrollLock() {
-    if (document.body.style.overflow ==="hidden") {
-      document.body.style.overflow ="auto"
-    } else {
-      document.body.style.overflow = "hidden"
-    }
-  }
+  // checkboxValue = false;
 
-  uncheckCheckbox() {
-    this.checkboxValue = false;
-  }
+  // toggleScrollLock() {
+  //   if (document.body.style.overflow ==="hidden") {
+  //     document.body.style.overflow ="auto"
+  //   } else {
+  //     document.body.style.overflow = "hidden"
+  //   }
+  // }
+
+  // uncheckCheckbox() {
+  //   this.checkboxValue = false;
+  // }
 
   
 

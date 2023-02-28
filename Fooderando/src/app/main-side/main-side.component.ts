@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-main-side',
   templateUrl: './main-side.component.html',
-  styleUrls: ['./main-side.component.scss']
+  styleUrls: ['./main-side.component.scss'],
+  
 })
 export class MainSideComponent implements OnInit {
 
@@ -15,6 +16,7 @@ export class MainSideComponent implements OnInit {
   drinks:any;
   desserts:any;
   basketItems: any[] = [];
+  showFiller = false;
 
   constructor(public dialog: MatDialog,private http: HttpClient) { }
 
@@ -49,11 +51,11 @@ export class MainSideComponent implements OnInit {
       this.basketItems.push(basketItem);
     }
   
-    this.dialog.open(BasketComponent, {
-      data: {
-        items: this.basketItems
-      }
-    });
+    // this.dialog.open(BasketComponent, {
+    //   data: {
+    //     items: this.basketItems
+    //   }
+    // });
   }
 
   openBasket(){

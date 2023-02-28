@@ -1,133 +1,186 @@
 <div>
-    <img class="image" src="../../assets/images/vegetarian-g248b31b6e_1920.jpg">
-    <div>
-        <div class=" first_row">
+    <mat-drawer-container class="example-container">
+        <mat-drawer #drawer class="example-sidenav">
+            <div class="example-sidenav-content">
+                <div>
+                    <img src="../../assets/images/carrot.ico" alt="logo">
+                </div>
+                <span>
+                    <h2>Superfood</h2>
+                </span>
+                <div>
+                    <button type="button" mat-button (click)="drawer.toggle()">
+                        <mat-icon>clear</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-list">
+
+                <span>Impressum</span>
+                <span>Dataprotection</span>
+                <span>Location</span>
+
+            </div>
+        </mat-drawer>
+
+        <div class="example-sidenav-content">
             <div>
-                <h1>Speisekarte</h1>
-                <img class="star_ico" src="../../assets/images/star.ico">
-                <img class="star_ico" src="../../assets/images/star.ico">
-                <img class="star_ico" src="../../assets/images/star.ico">
-                <img class="star_ico" src="../../assets/images/star.ico">
-                <img class="star_ico" src="../../assets/images/star.ico">
-                <span>Bewertungen</span>
+                <img src="../../assets/images/carrot.ico" alt="logo">
             </div>
-        </div>
-
-        <div class="second_row">
+            <span>
+                <h2>Superfood</h2>
+            </span>
             <div>
-                <img src="../../assets/images/clock.ico" alt=""> 30-45 Min
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    <mat-icon>reorder</mat-icon>
+                </button>
+            </div>
+        </div>
+
+
+        <img class="image" src="../../assets/images/vegetarian-g248b31b6e_1920.jpg">
+        <div>
+            <div class=" first_row">
+                <div class="Speisekarte-Bewertung">
+                    <span>
+                        <h1>Speisekarte</h1>
+                    </span>
+
+                    <div>
+                        <img class="star_ico" src="../../assets/images/star.ico">
+                        <img class="star_ico" src="../../assets/images/star.ico">
+                        <img class="star_ico" src="../../assets/images/star.ico">
+                        <img class="star_ico" src="../../assets/images/star.ico">
+                        <img class="star_ico" src="../../assets/images/star.ico">
+                        <span>Bewertungen</span>
+                    </div>
+
+                </div>
             </div>
 
-            <div>
-                <img src="../../assets/images/bike.ico" alt=""> 2.00€
+            <div class="second_row">
+                <div>
+                    <img src="../../assets/images/clock.ico" alt=""> 30-45 Min
+                </div>
+
+                <div>
+                    <img src="../../assets/images/bike.ico" alt=""> 2.00€
+                </div>
+
+                <div>
+                    <img src="../../assets/images/shopping-bag.ico" alt=""> Min. 25€
+                </div>
+
             </div>
 
-            <div>
-                <img src="../../assets/images/shopping-bag.ico" alt=""> Min. 25€
+
+            <div class="Menu_selection">
+                <a class="circle" href="#salads">Salate</a>
+                <a class="circle" href="#bowls">Bowls</a>
+                <a class="circle" href="#drinks">Drinks</a>
+                <a class="circle" href="#desserts">Desserts</a>
             </div>
 
         </div>
 
 
-        <div class="Menu_selection">
-            <a class="circle" href="#salads">Salate</a>
-            <a class="circle" href="#bowls">Bowls</a>
-            <a class="circle" href="#drinks">Drinks</a>
-            <a class="circle" href="#desserts">Desserts</a>
+
+        <div id="salads" class="Selection_section">
+            <img src="../../assets/images/salad_2.jpg" alt="selection_img">
+            <h2>Salads</h2>
+            <span>Salad: Fresh, healthy, and delicious. Choose from our selection of classic and contemporary salads,
+                made
+                with crisp greens, vibrant vegetables, and flavorful dressings. Perfect as a side dish or as a main
+                course
+                when topped with grilled chicken, shrimp, or tofu.
+            </span>
         </div>
 
-    </div>
+        <div *ngFor="let item of salads" class="Menu">
+            <div class="menuname_plus_info">
+                <h2>{{ item.menuName }}</h2>
+                <img class="info_btn" src="../../assets/images/info.ico" alt="info">
+                <div class="plus_sign">
+                    <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
+                </div>
+            </div>
+            <span>{{ item.description }}</span>
+            <span>{{ item.price }}</span>
+        </div>
 
+        <div id="bowls" class="Selection_section">
+            <img src="../../assets/images/bowl.jpg" alt="selection_img">
+            <h2>Bowls</h2>
+            <span> Nourishing and flavorful. Our bowls are a complete meal in a single dish, made with a base of rice or
+                grains, fresh veggies, and your choice of protein. Whether you prefer Hawaiian poke, Indian curry, or a
+                Buddha bowl, our bowls are a healthy and customizable option for lunch or dinner.
+            </span>
+        </div>
 
+        <div *ngFor="let item of bowls" class="Menu">
+            <div class="menuname_plus_info">
+                <h2>{{ item.menuName }}</h2>
+                <img class="info_btn" src="../../assets/images/info.ico" alt="info">
+                <div class="plus_sign">
+                    <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
+                </div>
+            </div>
+            <span>{{ item.description }}</span>
+            <span>{{ item.price }}</span>
+        </div>
 
-    <div id="salads" class="Selection_section">
-        <img src="../../assets/images/salad_2.jpg" alt="selection_img">
-        <h2>Salads</h2>
-        <span>Salad: Fresh, healthy, and delicious. Choose from our selection of classic and contemporary salads, made
-            with crisp greens, vibrant vegetables, and flavorful dressings. Perfect as a side dish or as a main course
-            when topped with grilled chicken, shrimp, or tofu.
-        </span>
-    </div>
+        <div id="drinks" class="Selection_section">
+            <img src="../../assets/images/drinks.jpg" alt="selection_img">
+            <h2>Drinks</h2>
+            <span> Drinks: Quench your thirst with our selection of refreshing beverages. From our signature cocktails
+                to
+                fresh-squeezed juices and artisanal teas and coffees, we have something for every taste. Sip on a fruity
+                mocktail, enjoy a glass of wine, or try one of our craft beers. Whatever your beverage of choice, our
+                drinks
+                menu has got you covered.
+            </span>
+        </div>
 
-    <div *ngFor="let item of salads" class="Menu">
-        <div class="menuname_plus_info">
-            <h2>{{ item.menuName }}</h2>
-            <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
+        <div *ngFor="let item of drinks" class="Menu">
+            <div class="menuname_plus_info">
+                <h2>{{ item.menuName }}</h2>
+                <img class="info_btn" src="../../assets/images/info.ico" alt="info">
+                <div class="plus_sign">
+                    <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
+                </div>
+            </div>
+            <span>{{ item.description }}</span>
+            <span>{{ item.price }}</span>
+        </div>
+
+        <div id="desserts" class="Selection_section">
+            <img src="../../assets/images/desserts.jpg" alt="selection_img">
+            <h2>Desserts</h2>
+            <span> Indulge your sweet tooth with our selection of delectable desserts. From classic favorites like
+                tiramisu
+                and crème brûlée to our rich and creamy cheesecake, each dessert is made with the finest ingredients and
+                served with care. Perfect as a sweet finish to any meal or as a treat for any time of day.
+            </span>
+        </div>
+
+        <div *ngFor="let item of desserts" class="Menu">
+            <div class="menuname_plus_info">
+                <h2>{{ item.menuName }}</h2>
+                <img class="info_btn" src="../../assets/images/info.ico" alt="info">
+                <div class="plus_sign">
+                    <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
+                </div>
+            </div>
+            <span>{{ item.description }}</span>
+            <span>{{ item.price }}</span>
+        </div>
+
+        <div class="sticky">
+            <div (click)="openBasket()" class="basket">
+                <img src="../../assets/images/shopping-bag.ico" alt="basket">
+                <span> {{ basketItems.length }} Orders</span>
             </div>
         </div>
-        <span>{{ item.description }}</span>
-        <span>{{ item.price }}</span>
-    </div>
 
-    <div id="bowls" class="Selection_section">
-        <img src="../../assets/images/bowl.jpg" alt="selection_img">
-        <h2>Bowls</h2>
-        <span> Nourishing and flavorful. Our bowls are a complete meal in a single dish, made with a base of rice or
-            grains, fresh veggies, and your choice of protein. Whether you prefer Hawaiian poke, Indian curry, or a
-            Buddha bowl, our bowls are a healthy and customizable option for lunch or dinner.
-        </span>
-    </div>
 
-    <div *ngFor="let item of bowls" class="Menu">
-        <div class="menuname_plus_info">
-            <h2>{{ item.menuName }}</h2>
-            <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>{{ item.description }}</span>
-        <span>{{ item.price }}</span>
-    </div>
-
-    <div id="drinks" class="Selection_section">
-        <img src="../../assets/images/drinks.jpg" alt="selection_img">
-        <h2>Drinks</h2>
-        <span> Drinks: Quench your thirst with our selection of refreshing beverages. From our signature cocktails to
-            fresh-squeezed juices and artisanal teas and coffees, we have something for every taste. Sip on a fruity
-            mocktail, enjoy a glass of wine, or try one of our craft beers. Whatever your beverage of choice, our drinks
-            menu has got you covered.
-        </span>
-    </div>
-
-    <div *ngFor="let item of drinks" class="Menu">
-        <div class="menuname_plus_info">
-            <h2>{{ item.menuName }}</h2>
-            <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>{{ item.description }}</span>
-        <span>{{ item.price }}</span>
-    </div>
-
-    <div id="desserts" class="Selection_section">
-        <img src="../../assets/images/desserts.jpg" alt="selection_img">
-        <h2>Desserts</h2>
-        <span> Indulge your sweet tooth with our selection of delectable desserts. From classic favorites like tiramisu
-            and crème brûlée to our rich and creamy cheesecake, each dessert is made with the finest ingredients and
-            served with care. Perfect as a sweet finish to any meal or as a treat for any time of day.
-        </span>
-    </div>
-
-    <div *ngFor="let item of desserts" class="Menu">
-        <div class="menuname_plus_info">
-            <h2>{{ item.menuName }}</h2>
-            <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-            <div class="plus_sign">
-                <img (click)="addToBasket(item)" src="../../assets/images/plus.ico" alt="plus">
-            </div>
-        </div>
-        <span>{{ item.description }}</span>
-        <span>{{ item.price }}</span>
-    </div>
-
-    <div class="sticky">
-        <div (click)="openBasket()" class="basket">
-            <img src="../../assets/images/shopping-bag.ico" alt="basket">
-            <span> {{ basketItems.length }} Orders</span>
-        </div>
-    </div>
+    </mat-drawer-container>
