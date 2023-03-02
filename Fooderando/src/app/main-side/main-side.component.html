@@ -43,7 +43,7 @@
             <div class=" first_row">
                 <div class="Speisekarte-Bewertung">
                     <span>
-                        <h1>Speisekarte</h1>
+                        <h1>Menu</h1>
                     </span>
 
                     <div>
@@ -52,7 +52,7 @@
                         <img class="star_ico" src="../../assets/images/star.ico">
                         <img class="star_ico" src="../../assets/images/star.ico">
                         <img class="star_ico" src="../../assets/images/star.ico">
-                        <span>Bewertungen</span>
+                        <span>reviews</span>
                     </div>
 
                 </div>
@@ -182,5 +182,15 @@
             </div>
         </div>
 
+        <div class="basket-container">
+            <div class="basket-icon" (click)="toggleBasket()">
+              <mat-icon>shopping_basket</mat-icon>
+            </div>
+            <div class="basket-items" [ngClass]="{'hidden': hideBasket}">
+                <!-- <app-basket></app-basket> -->
+            </div>
+          </div>
 
     </mat-drawer-container>
+
+    

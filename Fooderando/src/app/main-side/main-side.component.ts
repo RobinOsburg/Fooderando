@@ -7,8 +7,10 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-main-side',
   templateUrl: './main-side.component.html',
   styleUrls: ['./main-side.component.scss'],
-  
 })
+
+
+
 export class MainSideComponent implements OnInit {
 
   salads: any;
@@ -17,6 +19,10 @@ export class MainSideComponent implements OnInit {
   desserts:any;
   basketItems: any[] = [];
   showFiller = false;
+  hideBasket = true;
+
+  
+
 
   constructor(public dialog: MatDialog,private http: HttpClient) { }
 
@@ -64,5 +70,9 @@ export class MainSideComponent implements OnInit {
         items: this.basketItems
       }
     });
+  }
+
+  toggleBasket() {
+    this.hideBasket = !this.hideBasket;
   }
 }
