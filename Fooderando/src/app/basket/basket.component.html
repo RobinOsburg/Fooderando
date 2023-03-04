@@ -43,7 +43,7 @@
   <ng-container *ngIf="hasSalad()">
     <img class="basketImage" src="../../assets/images/salad_2.jpg" alt="salad_img">
     <ul>
-      <li *ngFor="let item of items | filter:'name':'salad'">
+      <li *ngFor="let item of items | filter:'type':'salad'">
         <div class="basket-item">
           <div class="item-name">{{ item.name }}</div>
           <div class="item-quantity">
@@ -63,7 +63,7 @@
   <ng-container *ngIf="hasBowl()">
     <img class="basketImage" src="../../assets/images/bowl.jpg" alt="bowl_img">
     <ul>
-      <li *ngFor="let item of items | filter: 'name':'bowl'">
+      <li *ngFor="let item of items | filter: 'type':'bowl'">
         <div class="basket-item">
           <div class="item-name">{{ item.name }}</div>
           <div class="item-quantity">
@@ -80,9 +80,50 @@
     </ul>
   </ng-container>
 
+  <ng-container *ngIf="hasDrinks()">
+    <img class="basketImage" src="../../assets/images/drinks.jpg" alt="drinks_img">
+    <ul>
+      <li *ngFor="let item of items | filter: 'type':'drinks'">
+        <div class="basket-item">
+          <div class="item-name">{{ item.name }}</div>
+          <div class="item-quantity">
+            <button mat-icon-button  (click)="decreaseQuantity(item)">
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span>{{ item.quantity }}</span>
+            <button mat-icon-button  (click)="increaseQuantity(item)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ng-container>
+
+  
+    <img class="basketImage" src="../../assets/images/desserts.jpg" alt="desserts_img">
+    <ul>
+      <li *ngFor="let item of items | filter: 'type':'desserts'">
+        <div class="basket-item">
+          <div class="item-name">{{ item.name }}</div>
+          <div class="item-quantity">
+            <button mat-icon-button  (click)="decreaseQuantity(item)">
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span>{{ item.quantity }}</span>
+            <button mat-icon-button  (click)="increaseQuantity(item)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  
+
   <div class="total">
     <p>Total: {{ getTotal() }}</p>
   </div>
+  
 </div>
 
 <div class="basket" *ngIf="items && items.length === 0">

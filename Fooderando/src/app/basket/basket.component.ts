@@ -55,4 +55,13 @@ export class BasketComponent {
   hasBowl() {
     return this.items.some((item) => item.name.toLowerCase().includes('bowl'));
   }
+
+  hasDrinks() {
+    return this.items.some((item) => item.name.toLowerCase().includes('drinks'));
+  }
+
+  hasDesserts() {
+     return this.items.some((item) => item.name.toLowerCase().includes('desserts')); 
+    
+  }
 }

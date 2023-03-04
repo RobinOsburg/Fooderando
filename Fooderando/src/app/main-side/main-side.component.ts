@@ -35,12 +35,12 @@ export class MainSideComponent implements OnInit {
       this.bowls = data;
     });
 
-    this.http.get('assets/desserts.json').subscribe(data => {
-      this.desserts = data;
-    });
-
     this.http.get('assets/drinks.json').subscribe(data => {
       this.drinks = data;
+    });
+
+    this.http.get('assets/desserts.json').subscribe(data => {
+      this.desserts = data;
     });
   }
 
