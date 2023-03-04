@@ -1,5 +1,13 @@
+<!-- 
 <div class="basket" *ngIf="items && items.length > 0">
   <button class="close-button" (click)="closeDialog()">X</button>
+  
+  
+  <img class="basketImage" *ngIf="hasSalad()" src="../../assets/images/salad_2.jpg" alt="selection_img">
+  
+  
+  <img class="basketImage" *ngIf="hasBowl()" src="../../assets/images/bowl.jpg" alt="bowl_img">
+
   <h2>Your Basket</h2>
   <ul>
     <li *ngFor="let item of items">
@@ -15,7 +23,7 @@
           </button>
 
         </div>
-        <!-- <div class="item-price">{{ item.price }}</div> -->
+        
       </div>
     </li>
   </ul>
@@ -26,5 +34,58 @@
 <div class="basket" *ngIf="items && items.length === 0">
   <button class="close-button" (click)="closeDialog()">X</button>
   <p>Basket is empty</p>
+</div> -->
+
+
+<div class="basket" *ngIf="items && items.length > 0">
+  <button class="close-button" (click)="closeDialog()">X</button>
+
+  <ng-container *ngIf="hasSalad()">
+    <img class="basketImage" src="../../assets/images/salad_2.jpg" alt="salad_img">
+    <ul>
+      <li *ngFor="let item of items | filter:'name':'salad'">
+        <div class="basket-item">
+          <div class="item-name">{{ item.name }}</div>
+          <div class="item-quantity">
+            <button mat-icon-button  (click)="decreaseQuantity(item)">
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span>{{ item.quantity }}</span>
+            <button mat-icon-button  (click)="increaseQuantity(item)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngIf="hasBowl()">
+    <img class="basketImage" src="../../assets/images/bowl.jpg" alt="bowl_img">
+    <ul>
+      <li *ngFor="let item of items | filter: 'name':'bowl'">
+        <div class="basket-item">
+          <div class="item-name">{{ item.name }}</div>
+          <div class="item-quantity">
+            <button mat-icon-button  (click)="decreaseQuantity(item)">
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span>{{ item.quantity }}</span>
+            <button mat-icon-button  (click)="increaseQuantity(item)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ng-container>
+
+  <div class="total">
+    <p>Total: {{ getTotal() }}</p>
+  </div>
 </div>
 
+<div class="basket" *ngIf="items && items.length === 0">
+  <button class="close-button" (click)="closeDialog()">X</button>
+  <p>Basket is empty</p>
+</div>

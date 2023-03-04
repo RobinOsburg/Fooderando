@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog} from '@angular/material/dialog';
 import { BasketComponent } from '../basket/basket.component';
 import { HttpClient } from '@angular/common/http';
 
@@ -44,15 +44,16 @@ export class MainSideComponent implements OnInit {
     });
   }
 
-  addToBasket(item: any) {
-    const index = this.basketItems.findIndex((i) => i.name === item.menuName);
+  addToBasket(item: any,itemType: string) {
+    const index = this.basketItems.findIndex((i) => i.name === item.menuName && i.type === itemType);
     if (index > -1) {
       this.basketItems[index].quantity++;
     } else {
       const basketItem = {
         name: item.menuName,
         price: item.price,
-        quantity: 1
+        quantity: 1,
+        type: itemType
       };
       this.basketItems.push(basketItem);
     }
@@ -72,7 +73,7 @@ export class MainSideComponent implements OnInit {
     });
   }
 
-  toggleBasket() {
-    this.hideBasket = !this.hideBasket;
-  }
+  // toggleBasket() {
+  //   this.hideBasket = !this.hideBasket;
+  // }
 }

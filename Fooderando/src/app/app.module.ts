@@ -7,19 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import { BasketComponent } from './basket/basket.component';
 import { FormsModule } from '@angular/forms';
 import { ReviewComponent } from './review/review.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule,  } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { FilterPipe } from './pipes/filter.pipe'; 
+
 
 @NgModule({
   declarations: [
+    FilterPipe,
     AppComponent,
     MainSideComponent,
     HeaderComponent,
     BasketComponent,
-    ReviewComponent
+    ReviewComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     BrowserAnimationsModule,
     HttpClientModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

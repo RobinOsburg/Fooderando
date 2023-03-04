@@ -1,19 +1,22 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialogRef,MAT_DIALOG_DATA,} from '@angular/material/dialog';
+import { MatDialogRef,MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
-  styleUrls: ['./basket.component.scss']
+  styleUrls: ['./basket.component.scss'],
+  
 })
 export class BasketComponent {
 
   items: any[];
 
+
   constructor(private dialogRef: MatDialogRef<BasketComponent>, 
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    ) {
+    @Inject(MAT_DIALOG_DATA) public data: any,) 
+    {
     this.items = data.items;
   }
 
@@ -43,5 +46,13 @@ export class BasketComponent {
 
   closeDialog() {
     this.dialogRef.close();
+  }
+
+  hasSalad() {
+    return this.items.some((item) => item.name.toLowerCase().includes('salad'));
+  }
+  
+  hasBowl() {
+    return this.items.some((item) => item.name.toLowerCase().includes('bowl'));
   }
 }
