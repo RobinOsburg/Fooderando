@@ -100,7 +100,7 @@
     </ul>
   </ng-container>
 
-  
+  <ng-container *ngIf="hasDesserts()">
     <img class="basketImage" src="../../assets/images/desserts.jpg" alt="desserts_img">
     <ul>
       <li *ngFor="let item of items | filter: 'type':'desserts'">
@@ -118,7 +118,7 @@
         </div>
       </li>
     </ul>
-  
+  </ng-container>
 
   <div class="total">
     <p>Total: {{ getTotal() }}</p>
