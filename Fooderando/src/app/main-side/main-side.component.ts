@@ -67,6 +67,8 @@ export class MainSideComponent implements OnInit {
 
   openBasket(){
     this.dialog.open(BasketComponent, {
+      width: '69vw',
+      height : '90vh',
       data: {
         items: this.basketItems
       }

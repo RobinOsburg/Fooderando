@@ -49,19 +49,19 @@ export class BasketComponent {
   }
 
   hasSalad() {
-    return this.items.some((item) => item.name.toLowerCase().includes('salad'));
+    return this.items.some((item) => item.type.toLowerCase().includes('salad'));
   }
   
   hasBowl() {
-    return this.items.some((item) => item.name.toLowerCase().includes('bowl'));
+    return this.items.some((item) => item.type.toLowerCase().includes('bowl'));
   }
 
   hasDrinks() {
-    return this.items.some((item) => item.name.toLowerCase().includes('drinks'));
+    return this.items.some((item) => item.type.toLowerCase().includes('drinks'));
   }
 
   hasDesserts() {
-     return this.items.some((item) => item.name.toLowerCase().includes('desserts')); 
+     return this.items.some((item) => item.type.toLowerCase().includes('desserts')); 
     
   }
 }

@@ -1,4 +1,4 @@
-<div>
+<div class="main-container">
     <mat-drawer-container class="example-container">
         <mat-drawer #drawer class="example-sidenav">
             <div class="example-sidenav-content">
@@ -100,8 +100,8 @@
             <div class="menuname_plus_info">
                 <h2>{{ item.menuName }}</h2>
                 <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-                <div class="plus_sign">
-                    <img (click)="addToBasket(item, 'salad')" src="../../assets/images/plus.ico" alt="plus">
+                <div (click)="addToBasket(item, 'salad')" class="plus_sign">
+                    <img  src="../../assets/images/plus.ico" alt="plus">
                 </div>
             </div>
             <span>{{ item.description }}</span>
@@ -121,8 +121,8 @@
             <div class="menuname_plus_info">
                 <h2>{{ item.menuName }}</h2>
                 <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-                <div class="plus_sign">
-                    <img (click)="addToBasket(item, 'bowl')" src="../../assets/images/plus.ico" alt="plus">
+                <div (click)="addToBasket(item, 'bowl')" class="plus_sign">
+                    <img  src="../../assets/images/plus.ico" alt="plus">
                 </div>
             </div>
             <span>{{ item.description }}</span>
@@ -145,8 +145,8 @@
             <div class="menuname_plus_info">
                 <h2>{{ item.menuName }}</h2>
                 <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-                <div class="plus_sign">
-                    <img (click)="addToBasket(item, 'drinks')" src="../../assets/images/plus.ico" alt="plus">
+                <div (click)="addToBasket(item, 'drinks')" class="plus_sign">
+                    <img  src="../../assets/images/plus.ico" alt="plus">
                 </div>
             </div>
             <span>{{ item.description }}</span>
@@ -167,8 +167,8 @@
             <div class="menuname_plus_info">
                 <h2>{{ item.menuName }}</h2>
                 <img class="info_btn" src="../../assets/images/info.ico" alt="info">
-                <div class="plus_sign">
-                    <img (click)="addToBasket(item, 'desserts')" src="../../assets/images/plus.ico" alt="plus">
+                <div (click)="addToBasket(item, 'desserts')" class="plus_sign">
+                    <img  src="../../assets/images/plus.ico" alt="plus">
                 </div>
             </div>
             <span>{{ item.description }}</span>
@@ -184,11 +184,12 @@
 
         <div class="basket-container">
             <div class="basket-icon" (click)="openBasket()">
-              <mat-icon>shopping_basket</mat-icon>
+                <ng-container *ngIf="basketItems.length <= 0; else totalAmount">
+                    <mat-icon>shopping_basket</mat-icon>
+                  </ng-container>
+                  <ng-template  #totalAmount> <div>{{ basketItems.length }}</div>  </ng-template>
             </div>
-            <!-- <div class="basket-items" [ngClass]="{'hidden': hideBasket}">
-                
-            </div> -->
+            
           </div>
 
     </mat-drawer-container>
